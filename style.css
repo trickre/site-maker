@@ -1,0 +1,90 @@
+body{
+    background-color: gray;
+    text-align      :left;
+    width: 100%;
+    margin  :0px 0px 0px 0px;
+    padding :0px;
+    float: left;
+}
+h1{
+    width   :100%;
+    margin  :0px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #a00000;
+    text-align  : center;
+    font-family: OCRB;
+}
+nav{
+    width   :100%;
+    height  :30px;
+    margin  :0px;
+    padding :0px;
+}
+#nav_top{
+    width   :100px;
+    height  :30px;
+    margin  :0px;
+    float   :left;
+    padding-bottom :2px;
+    font-size:20px;
+    text-align: center;
+    font-family :OCRB;
+}
+#nav_prf{
+    width   :100px;
+    height  :30px;
+    margin  :0px;
+    float   :right;
+    padding-bottom :2px;
+    font-size:20px;
+    text-align: center;
+    font-family :OCRB;
+}
+#content_l0{
+    background-color: #fefefe;
+    width   :600px;
+    margin  :50px 25px 50px 25px;
+    padding :2px;
+    float   :left;
+}
+.content_l1{
+    background-color: #d0d0d0;
+    width           :596px;
+    margin          :1px;
+    padding         :1px;
+    float           :left;
+}
+.content_l2{
+    background-color: #c0c0c0;
+    width   :282px;
+    margin  :6px;
+    padding :2px;
+    float   :left;
+}
+footer{
+    background-color: #252525;
+    color   :#a0a0a0;
+    width   :100%;
+    height  :15px;
+    margin  :0px;
+    padding :0px;
+    display:block;
+    float   : left;
+}
+#footer_l{
+    height  :15px;
+    margin  :0px;
+    float   :left;
+    font-size:10px;
+    vertical-align: bottom;
+    font-family :OCRB;
+}
+#footer_r{
+    height  :15px;
+    margin  :0px;
+    float   :right;
+    font-size:10px;
+    text-align: center;
+    font-family :OCRB;
+}
