@@ -36,6 +36,26 @@ class Html(HTML_Object):
         super().__init__()
         self.tag_start = "<html>"
         self.tag_end = "</html>"
+        self.add_content("<head>\n\
+        <meta charset=\"utf-8\"/>\n\
+        <link rel=\"stylesheet\" href=\"style.css\">")
+        self.add_content("\n</head>")
+
+class div(HTML_Object):
+    def __init__(self):
+        super().__init__()
+        self.tag_start = "<div>"
+        self.tag_end = "</div>"
+
+class h(HTML_Object):
+    def __init__(self,num):
+        super().__init__()
+        try:
+            h_num = int(num)
+        except ValueError:
+            print("input must be int. @h.__init__()")
+        self.tag_start = "<h"+str(h_num)+">"
+        self.tag_end = "</h"+str(h_num)+">"
 
 
 class Article():
@@ -48,5 +68,9 @@ if __name__ =="__main__":
     tp = p()
     html = Html()
     tp.add_content("this is p content")
+
+    h1 = h(1)
+    h1.add_content("これは第一タイトルです")
+    html.add_content(h1) 
     html.add_content(tp)
     html.print_content()    
