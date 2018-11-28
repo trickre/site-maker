@@ -2,3 +2,4 @@
 *.md
 gomi*
 !sample.md
+*.pyc
