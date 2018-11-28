@@ -14,7 +14,16 @@ def main():
         print("NG 1")
         print("input",end=" :");print(input1)
         print("output",end=":");print(ans1)
-        
 
+def parse_sample_file():
+    print("parse file test")
+    html = "test"
+    psr = parser_md.MDParser()
+    html = psr.parse_file("sample.md")
+    print(html)
+    with open("sample.html",mode="w",encoding="utf-8") as f:
+       f.write(html)
+    
 if __name__ =="__main__":
     main()
+    parse_sample_file()

@@ -14,14 +14,16 @@ class HTML_Object(object):
     def print_tag_end(self):
         return (self.tag_end)
     def print_content(self):
-        self.print_tag_start()
+        #self.print_tag_start()
+        content = ""
         for c in self.content:
             if issubclass(type(c),HTML_Object):
                 print("print innner")
-                c.print_content()
+                c.print_html()
             else:
-                return(c)
-        self.print_tag_end()
+                content+=str(c)
+        return(content)
+        #self.print_tag_end()
     
     def add_content(self,c):
         self.content.append(c)
@@ -61,6 +63,12 @@ class h(HTML_Object):
             print("input must be int. @h.__init__()")
         self.tag_start = "<h"+str(h_num)+">"
         self.tag_end = "</h"+str(h_num)+">"
+
+class li(HTML_Object):
+    def __init__(self):
+        super().__init__()
+        self.tag_start = "<li>"
+        self.tag_end = "</li>"
 
 class Article():
     title = ""
