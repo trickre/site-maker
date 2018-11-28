@@ -2,6 +2,7 @@
 #coding:utf-8
 import markdown
 import sys
+import class_html
 
 #>python main.py file.txt
 def main():
@@ -20,9 +21,11 @@ def main():
     #markdown to html
     md = markdown.Markdown()
     html = md.convert(text)
-
+    print("html is\n\n\n\n\n\n")
+    print(html)
     #print(html)
-
+    site = class_html.Html()
+    
     
     idx = file.rfind("/")+1
     if(idx ==-1):idx = 0

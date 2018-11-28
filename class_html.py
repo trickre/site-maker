@@ -10,9 +10,9 @@ class HTML_Object(object):
         self.tag_start  = ""
         self.tag_end    = ""
     def print_tag_start(self):
-        print (self.tag_start)
+        return (self.tag_start)
     def print_tag_end(self):
-        print (self.tag_end)
+        return (self.tag_end)
     def print_content(self):
         self.print_tag_start()
         for c in self.content:
@@ -20,11 +20,16 @@ class HTML_Object(object):
                 print("print innner")
                 c.print_content()
             else:
-                print(c)
+                return(c)
         self.print_tag_end()
     
     def add_content(self,c):
         self.content.append(c)
+    def print_html(self):
+        html = self.print_tag_start()
+        html += self.print_content()
+        html += self.print_tag_end()
+        return(html)
 class p(HTML_Object):
     def __init__(self):
         super().__init__()
@@ -46,7 +51,7 @@ class div(HTML_Object):
         super().__init__()
         self.tag_start = "<div>"
         self.tag_end = "</div>"
-
+#Usage: var = h(1) #h1; var = h(2) #h2
 class h(HTML_Object):
     def __init__(self,num):
         super().__init__()
@@ -57,12 +62,12 @@ class h(HTML_Object):
         self.tag_start = "<h"+str(h_num)+">"
         self.tag_end = "</h"+str(h_num)+">"
 
-
 class Article():
     title = ""
     def __init__(self,title_txt):
         title = title_txt
 
+#Usage
 if __name__ =="__main__":
     print("TEST html classes")
     tp = p()
